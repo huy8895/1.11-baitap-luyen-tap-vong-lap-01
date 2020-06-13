@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 8</title>
+</head>
+<body>
+<fieldset style="width: 200px">
+    <legend> game doan so</legend>
+    <form>
+        <input type="button" id="choi" value="chơi" onclick="Guess()"/>
+
+    </form>
+</fieldset>
+<script>
+    //game doan so
+    function Guess(){
+        let number1 = +parseInt(prompt('nhap so thu nhat'));
+        let number2 = +parseInt(prompt('nhap so thu hai'));
+        let rNumber = Math.round(Math.random()*(number2 - number1) + number1);
+        let guessNumber = parseInt(prompt('hay doan 1 so'));
+        while (guessNumber < number1 || guessNumber > number2){
+            alert('ban da nhap sai, hay nhap lai')
+            guessNumber = parseInt(prompt('hay doan 1 so'));
+        }
+        if (guessNumber == rNumber){
+            alert('xin chuc mung ban da doan dung')
+        }else (
+            alert('ban da doan sai roi')
+        )
+        document.write('dap an dung la: ' + rNumber)
+    }
+
+</script>
+</body>
+</html>

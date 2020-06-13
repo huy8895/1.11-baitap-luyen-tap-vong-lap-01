@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 6</title>
+</head>
+<body>
+<script>
+    //Bài 6: Tính tổng của 30 số chia hết cho 7
+    // đầu tiên trong các số tự nhiên.
+    let sum7 = 0;
+    let count = 0;
+    for (let i = 0;count < 30; i++ ){
+        if (i % 7 == 0 ){
+            count++;
+            sum7 += i;
+            document.write(count + ' : ' + i + '<br>')
+        }
+    }
+    document.write('tong cua 30 so dau tien chia het cho 7 la: ' + sum7)
+
+</script>
+</body>
+</html>
